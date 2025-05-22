@@ -34,12 +34,14 @@ function addItemToList(value, position = null) {
   });
 
   li.addEventListener("dblclick", () => {
-    const items = Array.from(document.querySelectorAll("#list li"));
-    const index = items.indexOf(li);
+    const confirmDelete = confirm(
+      `Are you sure you want to delete "${li.textContent}"?`
+    );
+    if (!confirmDelete) return;
 
+    const index = Array.from(list.children).indexOf(li);
     lastDeletedText = li.textContent;
     lastDeletedIndex = index;
-
     li.remove();
     saveListToStorage();
   });

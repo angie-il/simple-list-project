@@ -16,7 +16,7 @@ body {
   background: white;
   padding: 30px;
   border-radius: 16px;
-  width: 500px;
+  width: 45%;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -30,13 +30,12 @@ p {
   color: #333;
 }
 
-/* List */
 ul#list {
   list-style: none;
   border: 1px solid #ccc;
   padding: 10px;
-  height: 200px; /* ✅ Set a fixed height */
-  overflow-y: auto; /* ✅ Enable vertical scroll */
+  height: 200px;
+  overflow-y: auto;
   margin-bottom: 20px;
   border-radius: 8px;
   background: #fefefe;
@@ -80,13 +79,23 @@ button {
 
 .button-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
+  gap: 10px;
 }
 
-.left-buttons button {
-  margin-right: 10px;
+.left-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: 500px) {
+  .left-buttons {
+    flex-direction: row;
+  }
 }
 
 .right-buttons button {
@@ -101,10 +110,15 @@ button:hover {
 button#addButton {
   background: #3b5bfc;
   color: white;
+  width: 100%;
 }
 
-/* Modal backdrop */
-/* Modal overlay */
+@media (min-width: 500px) {
+  button#addButton {
+    width: auto;
+  }
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -113,18 +127,16 @@ button#addButton {
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
   display: flex;
-  align-items: flex-start; /* align to top */
+  align-items: flex-start;
   justify-content: center;
-  padding-top: 100px; /* push modal down slightly */
+  padding-top: 100px;
   z-index: 1000;
 }
 
-/* Hidden class (already works) */
 .hidden {
   display: none;
 }
 
-/* Modal box */
 .modal-content {
   background: white;
   padding: 30px;
@@ -136,7 +148,6 @@ button#addButton {
   animation: slideDown 0.3s ease forwards;
 }
 
-/* Slide down effect */
 @keyframes slideDown {
   to {
     opacity: 1;

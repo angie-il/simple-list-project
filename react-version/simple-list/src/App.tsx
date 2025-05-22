@@ -45,7 +45,9 @@ function App() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-blue-50">
       <div className="w-full max-w-md md:max-w-xl lg:max-w-2xl bg-white rounded-2xl shadow-lg p-8">
-        <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">My List</h1>
+        <h1 className="font-bold text-center text-gray-800 mb-6">Simple List</h1>
+        <p className="text-gray-800 mb-6 text-center">This is your list you can go on adding everything you need to</p>
+
         <ItemList
           items={items}
           selectedIndex={selectedIndex}

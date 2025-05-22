@@ -57,7 +57,6 @@ const AddItemModal = ({ open, onClose, onAddItem }: Props) => {
                         Cancel
                     </Button>
                 </div>
-
             </Box>
         </Modal >
     );

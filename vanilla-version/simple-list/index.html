@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple List</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Simple List</h1>
+        <p>This is your list you can go on adding everything you need to.</p>
+
+        <div id="app">
+            <ul id="list"></ul>
+            <div class="modal hidden" id="addModal">
+                <div class="modal-content">
+                    <label for="itemInput">Add item to list</label>
+                    <input type="text" id="itemInput" placeholder="Type the text here..." />
+                    <div class="modal-buttons">
+                        <button id="cancelAdd">Cancel</button>
+                        <button id="confirmAdd">Add</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="button-row">
+            <div class="left-buttons">
+                <button id="undoDelete">Undo</button>
+                <button id="deleteButton">Delete Item</button>
+            </div>
+            <div class="right-buttons">
+                <button id="addButton">Add Item</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

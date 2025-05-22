@@ -15,6 +15,7 @@ Both versions allow users to manage a list of text entries with an intuitive int
 - Select items by clicking on them
 - Delete the selected item with a button
 - Instantly delete any item by double-clicking it
+- Confirmation message for the double-click delete
 - Undo the most recently deleted item
 - Automatically save your list using `localStorage` and maintain it through a page refresh
 - Responsive

@@ -1,12 +1,22 @@
-import React from 'react';
+import { useState } from 'react';
 import { Modal, Button, Box, TextField, Typography } from '@mui/material';
 
 type Props = {
     open: boolean;
     onClose: () => void;
+    onAddItem: (item: string) => void;
 };
 
-const AddItemModal = ({ open, onClose }: Props) => {
+const AddItemModal = ({ open, onClose, onAddItem }: Props) => {
+    const [inputValue, setInputValue] = useState<string>("");
+
+    const handleAddItem = () => {
+        if (!inputValue.trim()) return;
+        onAddItem(inputValue.trim());
+        setInputValue("");
+        onClose();
+    };
+
     return (
         <Modal
             open={open}
@@ -25,9 +35,24 @@ const AddItemModal = ({ open, onClose }: Props) => {
                     label="Item name"
                     variant="outlined"
                     fullWidth
-                    className="bg-gray-50" />
-                <div className="flex justify-end gap-2">
-                    <Button aria-label="Add new item" variant="contained" color="primary">Add</Button>
+                    className="bg-gray-50"
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                            e.preventDefault();
+                            handleAddItem();
+                        }
+                    }
+                    }
+                />
+                < div className="flex justify-end gap-2" >
+                    <Button
+                        aria-label="Add new item"
+                        variant="contained"
+                        color="primary"
+                        onClick={handleAddItem}
+                    >Add</Button>
                     <Button aria-label="Cancel proccess" onClick={onClose} variant="outlined" color="secondary">
                         Cancel
                     </Button>

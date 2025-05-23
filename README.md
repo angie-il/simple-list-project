@@ -1,3 +1,64 @@
+# Aplicación de Lista Sencilla
+
+Este proyecto incluye dos implementaciones de un gestor de listas sencillo:
+
+- ⚛️ **Versión React** – desarrollada con React, TypeScript, TailwindCSS y Material UI  
+- 🌐 **Versión Vanilla JavaScript** – desarrollada con HTML, CSS y JavaScript puro  
+
+Ambas versiones permiten al usuario gestionar una lista de textos con una interfaz intuitiva y persistencia local.
+
+---
+
+## ¿Qué puede hacer esta aplicación?
+
+- Añadir nuevos elementos mediante un formulario modal
+- Seleccionar elementos haciendo clic sobre ellos
+- Eliminar el elemento seleccionado con un botón
+- Eliminar cualquier elemento haciendo doble clic
+- Mensaje de confirmación antes de eliminar con doble clic
+- Deshacer la última eliminación realizada
+- Guardado automático de la lista con `localStorage`, incluso al refrescar la página
+- Diseño responsive para diferentes tamaños de pantalla
+
+---
+
+## Tecnologías utilizadas
+
+### Versión React
+- React + TypeScript
+- TailwindCSS para estilos
+- Material UI (MUI) para modales e inputs
+- Vite
+- localStorage para persistencia
+
+### Versión Vanilla JS
+- HTML5
+- CSS3
+- JavaScript (sin frameworks)
+- localStorage
+
+---
+
+## 🧪 Cómo usar
+
+### Versión Vanilla JavaScript
+1. Abre `index.html` en tu navegador.
+2. Empieza a escribir y gestionar tu lista!
+
+### Versión React
+1. Instala las dependencias:
+
+2. Inicia el servidor:
+3. Abre el navegador.
+```
+   npm install
+   npm run dev
+   http://localhost:5173
+```
+
+
+### ENGLISH DOCUMENTATION:
+
 # Simple List App
 
 This project includes two implementations of a simple list manager:
@@ -46,14 +107,10 @@ Both versions allow users to manage a list of text entries with an intuitive int
 
 ### React Version
 1. Install dependencies:
-    ```bash
-       npm install
-
 2. Start the development server:
-   ```bash
-    npm run dev
-
-3. Visit
-   ```bash
+3. Visit in your browser.
+ ```
+   npm install
+   npm run dev
    http://localhost:5173
-  in your browser.
+```

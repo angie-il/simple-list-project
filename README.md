@@ -9,7 +9,7 @@ Ambas versiones permiten al usuario gestionar una lista de textos con una interf
 
 ---
 
-## ¿Qué puede hacer esta aplicación?
+## Qué puede hacer esta aplicación?
 
 - Añadir nuevos elementos mediante un formulario modal
 - Seleccionar elementos haciendo clic sobre ellos
@@ -39,7 +39,7 @@ Ambas versiones permiten al usuario gestionar una lista de textos con una interf
 
 ---
 
-## 🧪 Cómo usar
+## Como usar
 
 ### Versión Vanilla JavaScript
 1. Abre `index.html` en tu navegador.
